@@ -1,14 +1,14 @@
 <!-- send_message.html -->
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Send Message</title>
+    <link rel="stylesheet" href="{% static 'css/send_message.css' %}" />
   </head>
   <body>
-    <h1>Send Message</h1>
     {% if error_message %}
     <p>{{ error_message }}</p>
     {% endif %}
@@ -20,9 +20,10 @@
         id="recipient_username"
         name="recipient_username"
       /><br /><br />
-      <label for="content">Message:</label><br />
-      <textarea id="content" name="content"></textarea><br /><br />
-      <button type="submit">Send Message</button>
+      <label for="content">Send your message</label><br />
+      <textarea id="content" name="content" rows="5" cols="33"></textarea
+      ><br /><br />
+      <button type="submit" class="button-home">Submit</button>
     </form>
   </body>
 </html>
